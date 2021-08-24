@@ -5,7 +5,7 @@ const { Blog, User } = require('../../models');
 
 router.get('/', (req, res) => {
   Blog.findAll({
-    attributes: ['id', 'movie', 'title', 'text', 'created_at'],
+    attributes: ['id', 'title', 'text', 'created_at'],
     order: [['created_at', 'DESC']],
     include: [
       {
@@ -51,7 +51,6 @@ router.post('/', (req, res) => {
   // expects {title: 'Taskmaster goes public!', post_url: 'https://taskmaster.com/press', user_id: 1}
   Blog.create({
     title: req.body.title,
-    movie: req.body.movie,
     text: req.body.text,
     user_id: req.body.user_id
   })

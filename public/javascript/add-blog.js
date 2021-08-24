@@ -2,13 +2,11 @@ async function newFormHandler(event) {
   event.preventDefault();
 
   const title = document.querySelector('input[name="blog-title"]').value;
-  const movie = document.querySelector('input[name="movie"]').value;
   const text = document.querySelector('input[name="text"]').value;
   const response = await fetch(`/api/blogs`, {
     method: 'POST',
     body: JSON.stringify({
       title,
-      movie,
       text
     }),
     headers: {

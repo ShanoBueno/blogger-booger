@@ -12,7 +12,6 @@ router.get('/', withAuth, (req, res) => {
     },
     attributes: [
       'id',
-      'movie',
       'title',
       'text',
       'created_at',

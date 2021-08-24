@@ -14,10 +14,7 @@ Blog.init(
     title: {
       type: DataTypes.STRING,
       allowNull: false
-    },
-    movie: {
-      type: DataTypes.STRING,
-      allowNull: false
+
       
     },
     text: {

@@ -7,7 +7,6 @@ router.get('/', (req, res) => {
   Blog.findAll({
     attributes: [
       'id',
-      'movie',
       'title',
       'text',
       'created_at',
@@ -58,7 +57,7 @@ router.get('/blog/:id', (req, res) => {
     },
     attributes: [
       'id',
-      'movie',
+
       'title',
       'text',
       'created_at',
